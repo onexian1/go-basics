@@ -6,7 +6,10 @@ func main() {
 	//assignment()
 	//ifCondition()
 	//switchCondition()
-	fizzBuzz()
+	//fizzBuzz()
+	//strings()
+	//sprint()
+	evenEndedNumber()
 }
 
 func assignment() {
@@ -63,4 +66,58 @@ func fizzBuzz() {
 		}
 		curr++
 	}
+}
+
+func strings() {
+	book := "The color of magic"
+	fmt.Println(book)
+
+	// 18
+	fmt.Println(len(book))
+
+	// book[0] = 84 (type uint8)
+	// T = 84
+	fmt.Printf("book[0] = %v (type %T)\n", book[0], book[0])
+
+	// color o
+	fmt.Println(book[4:11])
+
+	// color of magic
+	fmt.Println(book[4:])
+
+	// The
+	fmt.Println(book[:4])
+
+	//
+	poem := `
+The road goes ever on
+Down from the door where it began`
+	fmt.Println(poem)
+}
+
+func sprint() {
+	n := 42
+	// convert 42 to string, store in s
+	s := fmt.Sprintf("%d", n)
+	// s = 42 (type string)
+	fmt.Printf("s = %v (type %T)\n", s, s)
+	// s = "42" (type string) -> %q includes quotation marks
+	fmt.Printf("s = %q (type %T)\n", s, s)
+}
+
+func evenEndedNumber() {
+	result := 0
+
+	for curr, last := 1000, 9999; curr <= last; curr++ {
+		for i := curr; i <= last; i++ {
+			num := curr * i
+			str := fmt.Sprintf("%d", num)
+			if str[0] == str[len(str)-1] {
+				result++
+			}
+		}
+	}
+
+	fmt.Println(result)
+
 }
