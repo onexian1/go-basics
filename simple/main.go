@@ -3,6 +3,13 @@ package main
 import "fmt"
 
 func main() {
+	//assignment()
+	//ifCondition()
+	//switchCondition()
+	fizzBuzz()
+}
+
+func assignment() {
 	// assignment, mean
 	x, y := 1.0, 2.0
 	fmt.Printf("x=%v, type of %T\n", x, x)
@@ -12,7 +19,10 @@ func main() {
 	mean := (x + y) / 2
 	fmt.Printf("result: %v, type of %T\n", mean, mean)
 
-	// simple
+}
+
+func ifCondition() {
+	x := 1.0
 	if x > 5 {
 		fmt.Printf("x: %v\n", x)
 	}
@@ -22,8 +32,10 @@ func main() {
 	} else {
 		fmt.Printf("x <= 100\n")
 	}
+}
 
-	// switch condition
+func switchCondition() {
+	x := 1.0
 	switch {
 	case x > 100:
 		fmt.Println("x > 100")
@@ -32,8 +44,9 @@ func main() {
 	default:
 		fmt.Println("x < 10")
 	}
+}
 
-	// fizzbuzz
+func fizzBuzz() {
 	curr := 1
 	last := 20
 	for curr != last {
