@@ -6,7 +6,9 @@ func main() {
 	//assignment()
 	//ifCondition()
 	//switchCondition()
-	fizzBuzz()
+	//fizzBuzz()
+	//strings()
+	
 }
 
 func assignment() {
@@ -63,4 +65,31 @@ func fizzBuzz() {
 		}
 		curr++
 	}
+}
+
+func strings() {
+	book := "The color of magic"
+	fmt.Println(book)
+
+	// 18
+	fmt.Println(len(book))
+
+	// book[0] = 84 (type uint8)
+	// T = 84
+	fmt.Printf("book[0] = %v (type %T)\n", book[0], book[0])
+
+	// color o
+	fmt.Println(book[4:11])
+
+	// color of magic
+	fmt.Println(book[4:])
+
+	// The
+	fmt.Println(book[:4])
+
+	//
+	poem := `
+The road goes ever on
+Down from the door where it began`
+	fmt.Println(poem)
 }
