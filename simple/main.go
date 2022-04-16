@@ -9,6 +9,7 @@ func main() {
 	//fizzBuzz()
 	//strings()
 	//sprint()
+	evenEndedNumber()
 }
 
 func assignment() {
@@ -102,4 +103,21 @@ func sprint() {
 	fmt.Printf("s = %v (type %T)\n", s, s)
 	// s = "42" (type string) -> %q includes quotation marks
 	fmt.Printf("s = %q (type %T)\n", s, s)
+}
+
+func evenEndedNumber() {
+	result := 0
+
+	for curr, last := 1000, 9999; curr <= last; curr++ {
+		for i := curr; i <= last; i++ {
+			num := curr * i
+			str := fmt.Sprintf("%d", num)
+			if str[0] == str[len(str)-1] {
+				result++
+			}
+		}
+	}
+
+	fmt.Println(result)
+
 }
