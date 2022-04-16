@@ -33,4 +33,21 @@ func main() {
 		fmt.Println("x < 10")
 	}
 
+	// fizzbuzz
+	curr := 1
+	last := 20
+	for curr != last {
+		mod3 := curr%3 == 0
+		mod5 := curr%5 == 0
+		if mod3 {
+			fmt.Println("fizz")
+		}
+		if mod5 {
+			fmt.Println("buzz")
+		}
+		if !mod3 && !mod5 {
+			fmt.Println(curr)
+		}
+		curr++
+	}
 }
