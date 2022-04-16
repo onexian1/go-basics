@@ -8,7 +8,7 @@ func main() {
 	//switchCondition()
 	//fizzBuzz()
 	//strings()
-	
+	//sprint()
 }
 
 func assignment() {
@@ -92,4 +92,14 @@ func strings() {
 The road goes ever on
 Down from the door where it began`
 	fmt.Println(poem)
+}
+
+func sprint() {
+	n := 42
+	// convert 42 to string, store in s
+	s := fmt.Sprintf("%d", n)
+	// s = 42 (type string)
+	fmt.Printf("s = %v (type %T)\n", s, s)
+	// s = "42" (type string) -> %q includes quotation marks
+	fmt.Printf("s = %q (type %T)\n", s, s)
 }
